@@ -39,32 +39,15 @@
             if (humanChoice === computerChoice) {
                 console.log("That is a tie in this round");
             }
-            else if (humanChoice === 0 && computerChoice === 1) {
+            else if (humanChoice === 0 && computerChoice === 1 || humanChoice === 2 && computerChoice === 0 || humanChoice === 1 && computerChoice === 2) {
                 console.log("computer wins this round");
                 computerScore++;
 
             }
-            else if (humanChoice === 0 && computerChoice === 2) {
+            else if (humanChoice === 0 && computerChoice === 2 || humanChoice === 1 && computerChoice === 0 || humanChoice === 2 && computerChoice === 1) {
                 console.log("you win this round");
                 humanScore++;
             }
-            else if (humanChoice === 1 && computerChoice === 0) {
-                console.log("you win this round");
-                humanScore++;
-            }
-            else if (humanChoice === 1 && computerChoice === 2) {
-                console.log("computer wins this round");
-                computerScore++;
-            }
-            else if (humanChoice === 2 && computerChoice === 0) {
-                console.log("computer wins this round");
-                computerScore++;
-            }
-            else if (humanChoice === 2 && computerChoice === 1) {
-                console.log("you win this round");
-                humanScore++;
-            }
-
         }
         function playGame() {
             for (let i = 1; i <= 5; i++) {
