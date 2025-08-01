@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body style="background-color: black;">
+    <script>
+        function getComputerChoice() {
+            let choice = Math.floor(Math.random() * 3);
+            if (choice === 0) { console.log("Computer choose Rock"); }
+            else if (choice === 1) { console.log("Computer choose Paper"); }
+            else if (choice === 2) { console.log("Computer choose Scissors"); }
+            return choice;
+        }
+        function getHumanChoice() {
+            let choice = prompt("choose Rock or Paper or Scissors?", "")
+            if (choice.toLocaleLowerCase() === "rock") {
+                console.log("you choose Rock");
+                return 0;
+            }
+            else if (choice.toLocaleLowerCase() === "paper") {
+                console.log("you choose Paper");
+                return 1;
+            }
+            else if (choice.toLocaleLowerCase() === "scissors") {
+                console.log("you choose Scissors");
+                return 2;
+            }
+            else { console.log("invalid input"); return }
+        }
+    </script>
+</body>
+
+</html>
